@@ -1,0 +1,24 @@
+// Styles for each individual thumbnail
+
+.thumbnail {
+  overflow: hidden;
+  text-align: left;
+
+  > a {
+    color: $copy-light;
+
+    > img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+
+    .meta {
+      background: $black;
+      padding: 0.25rem 0.5rem;
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.8rem;
+    }
+  }
+}

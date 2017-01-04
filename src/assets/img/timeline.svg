@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="314px" height="44px" viewBox="0 0 314 44" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 3.8.1 (29687) - http://www.bohemiancoding.com/sketch -->
+    <title>Group 2</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Expanded-Insurance-Price" transform="translate(-33.000000, -1157.000000)">
+            <g id="Group-2" transform="translate(30.000000, 1158.000000)">
+                <circle id="Oval-1" fill="#5FC7CB" cx="21" cy="6" r="6"></circle>
+                <circle id="Oval-1" fill="#5FC7CB" cx="113" cy="6" r="6"></circle>
+                <circle id="Oval-1" stroke="#BAB0AF" cx="297" cy="6" r="6"></circle>
+                <circle id="Oval-1" fill="#5FC7CB" cx="205" cy="6" r="6"></circle>
+                <path d="M32.5,6 L101.565186,6" id="Line" stroke="#8BDDE0" stroke-width="2" stroke-linecap="square"></path>
+                <path d="M124.5,5 L193.565186,5" id="Line" stroke="#8BDDE0" stroke-width="2" stroke-linecap="square"></path>
+                <text id="Order" font-family="FreightSansProMedium-Regular, FreightSans Pro" font-size="10" font-weight="400" fill="#2E343B">
+                    <tspan x="8.61" y="27">Order</tspan>
+                    <tspan x="2.94" y="39.2300005">Received</tspan>
+                </text>
+                <text id="Processing-" font-family="FreightSansProMedium-Regular, FreightSans Pro" font-size="10" font-weight="400" fill="#2E343B">
+                    <tspan x="91.045" y="27">Processing </tspan>
+                    <tspan x="98.09" y="39.2300005">Sample</tspan>
+                </text>
+                <text id="Estimate" font-family="FreightSansProMedium-Regular, FreightSans Pro" font-size="10" font-weight="400" fill="#2E343B">
+                    <tspan x="187.78" y="27">Estimate</tspan>
+                    <tspan x="184.105" y="39.2300005">Generated</tspan>
+                </text>
+                <text id="Results-Delivered" font-family="FreightSansProMedium-Regular, FreightSans Pro" font-size="10" font-weight="400" fill="#2E343B">
+                    <tspan x="283.015" y="27">Results </tspan>
+                    <tspan x="278.175" y="39.2300005">Delivered</tspan>
+                </text>
+                <path d="M216.5,5 L245,5" id="Line" stroke="#8BDDE0" stroke-width="2" stroke-linecap="square"></path>
+                <path d="M243,5 L285.565186,5" id="Line" stroke="#BAB1AF" stroke-width="2" stroke-linecap="square"></path>
+            </g>
+        </g>
+    </g>
+</svg>
