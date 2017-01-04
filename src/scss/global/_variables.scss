@@ -30,6 +30,16 @@ $bg-right:        $purple-medium;
 $default-corner:   6px;
 
 
+/*  Z-index
+-------------------------------------------------------*/
+
+$zindex: (
+  modal: 3,
+  overlay: 2,
+  gallery: 1
+);
+
+
 /*  Transitions
 -------------------------------------------------------*/
 $default-tx-time:     0.3s;
