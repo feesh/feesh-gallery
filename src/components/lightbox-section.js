@@ -20,21 +20,30 @@ class Lightbox extends React.Component {
       <section className="content__lightbox">
         <div className="modal">
           <span
-            className="prev"
+            className="arrow prev"
             onClick={() => this.toggleArrow(selected_pic, 'prev')}
+            title="View previous photo"
           >
-            ⬅️
+            ◀️
           ️</span>
-          <p><img src={photos[selected_pic].images.standard_resolution.url} /></p>
+          <div className="image">
+            <img
+              src={photos[selected_pic].images.standard_resolution.url}
+              alt={photos[selected_pic].caption.text}
+            />
+            <h3>{photos[selected_pic].caption.text}</h3>
+          </div>
           <span
-            className="next"
+            className="arrow next"
             onClick={() => this.toggleArrow(selected_pic, 'next')}
+            title="View next photo"
           >
-            ➡
+            ▶️
           ️</span>
         </div>
         <div
           className="overlay"
+          title="Click to close lightbox"
           onClick={() => this.toggleLightbox(null)}
         />
       </section>
