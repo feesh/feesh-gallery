@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node server.js & NODE_ENV=development webpack-dev-server --inline --hot",
-    "test": "NODE_ENV=test mocha --require ./src/tests/setup-jsdom.js --require babel-core/register ./src/tests/",
+    "build": "webpack -p",
     "lint": "eslint ./src/** --fix"
   },
   "author": "",
