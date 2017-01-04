@@ -7,7 +7,7 @@ class Lightbox extends React.Component {
 
     return (
       <section className="content__lightbox">
-        <p>{selected_pic}</p>
+        <p><img src={photos[selected_pic].images.low_resolution.url} /></p>
       </section>
     );
   }
