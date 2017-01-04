@@ -11,14 +11,19 @@
   max-width: 100vw;
   max-height: 100vh;
 
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+
   margin: 0 auto;
   padding: 2rem 1rem;
   background: $bg-modal;
   border-radius: $default-corner * 2;
   box-shadow: 0 0 30px rgba($black, 0.5);
 
+  // For when too tall photos get cut off
   @media only screen and (min-width: $medium-screens)  {
-    bottom: 10%;
+    bottom: 5%;
   }
 
   .close {
