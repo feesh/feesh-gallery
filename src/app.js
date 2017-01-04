@@ -12,8 +12,8 @@ class App extends React.Component {
     this.toggleLightbox = this.toggleLightbox.bind(this);
 
     this.state = {
-      open: true,
-      selected_pic: 1,
+      open: false,
+      selected_pic: null,
     };
   }
 
@@ -80,9 +80,6 @@ class App extends React.Component {
         selected_pic: new_index,
       });
     }
-
-    console.log(dir);
-    console.log(pic);
   }
 
 
