@@ -19,7 +19,7 @@ class Thumbnails extends React.Component {
 
   renderThumbnail(key, photo) {
     return (
-      <Thumbnail key={key} photo={photo} />
+      <Thumbnail key={key} photo={photo} id={key} {...this.props} />
     );
   }
 
