@@ -45,12 +45,42 @@ class App extends React.Component {
 
   // For navigating to the next photo while the lightbox is open
   toggleArrow(pic, dir) {
+    let change = 0; // where to move in array
+    let current_pic = pic; // current index
+    let count = this.props.photos.length; // how many posts
+
     // Check to see which direction was clicked
-    // Set + or - based on direction
+    if (dir === 'next') {
+      change = 1; // go up in array
+    } else if (dir === 'prev') {
+      change = -1; // reverse in array
+    }
+
+    // Set new pic index
+    let new_index = current_pic + change;
+
     // Check current position in array
-      // If +/- 1 in that direction is more than 0 or count
-        // Then loop to the end or the beginning of the array
+    // If +/- 1 in that direction is more than 0 or count, adjust accordingly
+    if (new_index + 1 > count) { // +1 because index starts at 0
+      // At the last post, loop to beginning
+      this.setState({
+        open: true,
+        selected_pic: 0,
+      });
+    } else if (new_index < 0) {
+      // At first post, loop to end
+      this.setState({
+        open: true,
+        selected_pic: count - 1,
+      });
+    } else {
       // Else update selected_pic with the new index
+      this.setState({
+        open: true,
+        selected_pic: new_index,
+      });
+    }
+
     console.log(dir);
     console.log(pic);
   }
