@@ -22,11 +22,19 @@ class App extends React.Component {
     // What pic is currently open
     const current_pic = this.state.selected_pic;
 
-    // Open the selected pic
-    this.setState({
-      open: true,
-      selected_pic: pic,
-    });
+    // If no pic, close the lightbox
+    if(!pic) {
+      this.setState({
+        open: false,
+        selected_pic: null,
+      });
+    } else {
+      // Open the selected pic
+      this.setState({
+        open: true,
+        selected_pic: pic,
+      });
+    }
   }
 
   // For navigating to the next photo while the lightbox is open
@@ -52,6 +60,7 @@ class App extends React.Component {
               photos={photos}
               selected_pic={this.state.selected_pic}
               toggleArrow={(pic, dir) => this.toggleArrow(pic, dir)}
+              toggleLightbox={(pic) => this.toggleLightbox(pic)}
             />
           }
           <Thumbnails
