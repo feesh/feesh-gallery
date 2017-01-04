@@ -21,7 +21,7 @@ a {
 // For the emoji icons
 .bigmoji {
   cursor: pointer;
-  font-size: 3.25rem;
+  font-size: 1.5rem;
   padding: 0.5rem;
   transition: $tx-all;
   position: relative;
@@ -31,6 +31,10 @@ a {
   -moz-filter:    grayscale(100%);
   -ms-filter:     grayscale(100%);
   -o-filter:      grayscale(100%);
+
+  @media only screen and (min-width: $medium-screens)  {
+    font-size: 3.25rem;
+  }
 
   &:hover {
     filter: gray;

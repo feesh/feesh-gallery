@@ -8,13 +8,23 @@
 
   li {
     flex: 1;
-    min-width: 33.3%;
-    max-width: 33.3%;
+    min-width: 100%;
+    height: auto;
     padding: 1rem;
 
     box-shadow: 0px 0px 10px rgba($white, 0.125);
     list-style: none;
     transition: $tx-all;
+
+    @media only screen and (min-width: $small-screens)  {
+      min-width: 50%;
+      max-width: 50%;
+    }
+
+    @media only screen and (min-width: $medium-screens)  {
+      min-width: 33.3%;
+      max-width: 33.3%;
+    }
 
     &:hover {
       box-shadow: 0px 0px 10px rgba($white, 0.3);
