@@ -37,10 +37,26 @@ class Lightbox extends React.Component {
               ◀️
             ️</span>
             <div className="image">
-              <img
-                src={photos[selected_pic].images.standard_resolution.url}
-                alt={photos[selected_pic].caption.text}
-              />
+              { photos[selected_pic].type === 'image' &&
+                <img
+                  src={photos[selected_pic].images.standard_resolution.url}
+                  alt={photos[selected_pic].caption.text}
+                />
+              }
+              { photos[selected_pic].type === 'video' &&
+                <video
+                  width={photos[selected_pic].videos.standard_resolution.width}
+                  height={photos[selected_pic].videos.standard_resolution.height}
+                  title={photos[selected_pic].caption.text}
+                  controls
+                >
+                  <source
+                    src={photos[selected_pic].videos.standard_resolution.url}
+                    type="video/mp4"
+                  />
+                  Your browser does not support the video tag.
+                </video>
+              }
               <h3>{photos[selected_pic].caption.text}</h3>
             </div>
             <span
