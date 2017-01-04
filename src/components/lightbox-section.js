@@ -13,21 +13,52 @@ class Lightbox extends React.Component {
     this.props.toggleArrow(pic, dir);
   }
 
+  // Render which type of media it is
+  renderPost(pic, type) {
+    const { photos } = this.props;
+
+    if (type === 'image') {
+      return (
+        <img
+          src={photos[pic].images.standard_resolution.url}
+          alt={photos[pic].caption.text}
+        />
+      );
+    } else if (type === 'video') {
+      return (
+        <video
+          width={photos[pic].videos.standard_resolution.width}
+          height={photos[pic].videos.standard_resolution.height}
+          title={photos[pic].caption.text}
+          controls
+        >
+          <source
+            src={photos[pic].videos.standard_resolution.url}
+            type="video/mp4"
+          />
+          Your browser does not support the video tag.
+        </video>
+      );
+    } else {
+      return (
+        <p>Invalid type</p>
+      );
+    }
+  }
+
   render() {
     const { photos, selected_pic } = this.props;
 
     return (
       <section className="content__lightbox">
         <div className="modal">
-          <div className="header">
-            <span
-              className="bigmoji close"
-              onClick={() => this.toggleLightbox(null)}
-              title="Close lightbox"
-            >
-              ❌
-            </span>
-          </div>
+          <span
+            className="bigmoji close"
+            onClick={() => this.toggleLightbox(null)}
+            title="Close lightbox"
+          >
+            ❌
+          </span>
           <div className="modal-body">
             <span
               className="bigmoji arrow prev"
@@ -37,26 +68,7 @@ class Lightbox extends React.Component {
               ◀️
             ️</span>
             <div className="image">
-              { photos[selected_pic].type === 'image' &&
-                <img
-                  src={photos[selected_pic].images.standard_resolution.url}
-                  alt={photos[selected_pic].caption.text}
-                />
-              }
-              { photos[selected_pic].type === 'video' &&
-                <video
-                  width={photos[selected_pic].videos.standard_resolution.width}
-                  height={photos[selected_pic].videos.standard_resolution.height}
-                  title={photos[selected_pic].caption.text}
-                  controls
-                >
-                  <source
-                    src={photos[selected_pic].videos.standard_resolution.url}
-                    type="video/mp4"
-                  />
-                  Your browser does not support the video tag.
-                </video>
-              }
+              {this.renderPost(selected_pic, photos[selected_pic].type)}
               <h3>{photos[selected_pic].caption.text}</h3>
             </div>
             <span
