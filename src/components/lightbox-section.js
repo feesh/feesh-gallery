@@ -7,7 +7,10 @@ class Lightbox extends React.Component {
 
     return (
       <section className="content__lightbox">
-        <p><img src={photos[selected_pic].images.low_resolution.url} /></p>
+        <div className="modal">
+          <p><img src={photos[selected_pic].images.standard_resolution.url} /></p>
+        </div>
+        <div className="overlay" />
       </section>
     );
   }

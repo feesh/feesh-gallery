@@ -1,0 +1,6 @@
+// Lightbox modal styles
+
+.modal {
+  position: relative;
+  z-index: map-get($zindex, modal);
+}

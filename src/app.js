@@ -13,7 +13,7 @@ class App extends React.Component {
 
     this.state = {
       open: false,
-      selected_pic: null,
+      selected_pic: 1,
     };
   }
 
