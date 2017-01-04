@@ -12,7 +12,7 @@ class App extends React.Component {
     this.toggleLightbox = this.toggleLightbox.bind(this);
 
     this.state = {
-      open: false,
+      open: true,
       selected_pic: 1,
     };
   }
@@ -22,8 +22,14 @@ class App extends React.Component {
     // What pic is currently open
     const current_pic = this.state.selected_pic;
 
-    // If no pic, close the lightbox
-    if(!pic) {
+    // If pic index is 0, it won't show (bc null)
+    if(pic === 0) {
+      this.setState({
+        open: true,
+        selected_pic: 0,
+      });
+    } else if(!pic) {
+      // If no pic, close the lightbox
       this.setState({
         open: false,
         selected_pic: null,
@@ -56,7 +62,7 @@ class App extends React.Component {
     return (
       <section className="gallery">
         <div className="content">
-          { this.state.selected_pic &&
+          { this.state.open &&
             // Show lightbox if a pic is selected
             <Lightbox
               photos={photos}

@@ -11,8 +11,10 @@
   border-radius: $default-corner * 2;
   box-shadow: 0 0 30px rgba($black, 0.5);
 
-  .header {
-    text-align: right;
+  .close {
+    position: absolute;
+    top: 0.5rem;
+    right: 1.5rem;
   }
 
   .modal-body {
