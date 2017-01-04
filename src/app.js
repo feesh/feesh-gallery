@@ -45,6 +45,8 @@ class App extends React.Component {
       // If +/- 1 in that direction is more than 0 or count
         // Then loop to the end or the beginning of the array
       // Else update selected_pic with the new index
+    console.log(dir);
+    console.log(pic);
   }
 
 

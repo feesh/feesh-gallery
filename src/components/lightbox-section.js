@@ -8,13 +8,30 @@ class Lightbox extends React.Component {
     this.props.toggleLightbox(pic);
   }
 
+  // Pass next or prev click to parent
+  toggleArrow(pic, dir) {
+    this.props.toggleArrow(pic, dir);
+  }
+
   render() {
     const { photos, selected_pic } = this.props;
 
     return (
       <section className="content__lightbox">
         <div className="modal">
+          <span
+            className="prev"
+            onClick={() => this.toggleArrow(selected_pic, 'prev')}
+          >
+            ⬅️
+          ️</span>
           <p><img src={photos[selected_pic].images.standard_resolution.url} /></p>
+          <span
+            className="next"
+            onClick={() => this.toggleArrow(selected_pic, 'next')}
+          >
+            ➡
+          ️</span>
         </div>
         <div
           className="overlay"
