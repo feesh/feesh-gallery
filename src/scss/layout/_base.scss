@@ -17,3 +17,18 @@ body {
 a {
   text-decoration: none;
 }
+
+// For the emoji icons
+.bigmoji {
+  cursor: pointer;
+  font-size: 3.25rem;
+  padding: 0.5rem;
+  transition: $tx-all;
+  position: relative;
+  border-bottom: 1px solid rgba($white, 0);
+
+  &:hover {
+    border-bottom: 1px solid $white;
+  }
+}
+

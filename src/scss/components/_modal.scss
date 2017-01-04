@@ -1,9 +1,6 @@
 // Lightbox modal styles
 
 .modal {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   position: fixed;
   width: 70%;
   z-index: map-get($zindex, modal);
@@ -13,6 +10,16 @@
   background: $bg-modal;
   border-radius: $default-corner * 2;
   box-shadow: 0 0 30px rgba($black, 0.5);
+
+  .header {
+    text-align: right;
+  }
+
+  .modal-body {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
 
   .image {
     text-align: center;
@@ -27,11 +34,7 @@
   }
 
   .arrow {
-    cursor: pointer;
-    height: 100%;
-    font-size: 3.5rem;
-
-    &.next {
+    &.prev {
       text-align: right;
     }
   }
